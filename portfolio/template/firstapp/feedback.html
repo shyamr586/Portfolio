@@ -1,9 +1,37 @@
 {% extends "firstapp/base.html"%}
+{% load socialaccount %}
 {%block title%} Feedback {% endblock %}
     {% block content %} 
     <div class = "container">
         <div class="jumbotron">
             <h1>Feedback Page</h1>
+            <h2>{{message}}</h2>
+        </div>
+
+        
+        {% if user.is_authenticated %}
+            <!-- <img src = "{{user.picture_url}}"> -->
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+            </form>
+        {% else %}
+
+        <div class="jumbotron">
+            <a href="{% provider_login_url 'linkedin_oauth2' %}" class="btn btn-secondary">
+                <i class="fa fa-linkedin fa-fw"></i>
+                <span>Login with LinkedIn to post a Feedback!</span>
+            </a>
+            
+        </div>
+        {% endif %}
+        <div class="jumbotron">
+            
+            {% for entry in feedbacks %}
+                {{entry.name}}
+                {{entry.comment}}
+            {% endfor %}
         </div>
     </div>
     {% endblock %}

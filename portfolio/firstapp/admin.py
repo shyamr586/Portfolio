@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import ShortSummary
-# Register your models here.
+from .models import FeedbackModel
 
-admin.site.register(ShortSummary)
+admin.site.register(FeedbackModel)

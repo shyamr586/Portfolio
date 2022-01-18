@@ -1,10 +1,25 @@
 {% extends 'firstapp/base.html' %}
+{% load socialaccount %}
+
     {% block title%}Index Page{%endblock%}
 
     {% block content %}
+
+    
+
     <div class="container">
         <div class="jumbotron">
-            <h1>Hello, {{message}}</h1>
+            <h1>Hello, {{message}}
+                {% if user.is_authenticated %}
+                <span>
+                    {{ user.first_name }}
+                    {{ user.last_name }}
+                     <p>{{ user.token }}</p>
+                     
+                </span>
+                {% endif %}
+                !
+            </h1>
         </div>
 
         <div class="jumbotron">

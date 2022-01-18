@@ -1,10 +1,12 @@
 from statistics import mode
+from tkinter.ttk import Widget
 from django.db import models
 
-# Create your models here.
-class ShortSummary(models.Model):
-    description = models.CharField(max_length = 400)
-    employment_status = models.CharField(max_length = 100)
+
+class FeedbackModel(models.Model):
+    name = models.CharField(max_length=100)
+    comment = models.TextField(max_length=1000)
+    
 
     def __str__(self):
-        return "Index"
+        return self.name

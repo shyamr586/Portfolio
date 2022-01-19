@@ -1,0 +1,8 @@
+label,input {
+    display: block;
+    height: 30px auto;
+}
+
+textarea{
+    height: auto;
+}

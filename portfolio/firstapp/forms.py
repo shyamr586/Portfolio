@@ -7,5 +7,6 @@ class FeedbackForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'name': forms.HiddenInput(),
+            'comment': forms.Textarea(attrs={'rows':3}),
         }
 

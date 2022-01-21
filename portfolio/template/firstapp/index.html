@@ -1,5 +1,10 @@
 {% extends 'firstapp/base.html' %}
+{% load static %}
 {% load socialaccount %}
+{%block head%} 
+<link rel="stylesheet" type="text/css" href="{% static "firstapp/css/index.css" %}">
+
+{%endblock%}
 
     {% block title%}Index Page{%endblock%}
 
@@ -8,28 +13,45 @@
     
 
     <div class="container">
-        <div class="jumbotron">
-            <h1>Hello, {{message}}
-                {% if user.is_authenticated %}
-                <span>
-                    {{ user.first_name }}
-                    {{ user.last_name }}!
-                </span>
-                {% endif %}
-                
-            </h1>
+        <div class="content jumbotron text-center">
+            <div class="cover"></div>
+            <div class="text">
+                <h1>Hello, {{message}}
+                    {% if user.is_authenticated %}
+                    <span>
+                        {{ user.first_name }}
+                        {{ user.last_name }}!
+                    </span>
+                    {% endif %}
+                    
+                </h1>   
+            </div>
         </div>
 
-        <div class="jumbotron">
-            <h2>About Me</h2>
-            <hr>
+        <div class="jumbotron hidden" id="first">
             <p>{{short_bio}}</p>
         </div>
 
-        <div class="jumbotron">
+        <div class="jumbotron hidden">
             <h2>Employment Status</h2>
-            <hr>
+            <p>{{status}}</p>
+        </div>
+        <div class="jumbotron hidden">
+            <h2>Employment Status</h2>
+            <p>{{status}}</p>
+        </div>
+        <div class="jumbotron hidden">
+            <h2>Employment Status</h2>
+            <p>{{status}}</p>
+        </div>
+        <div class="jumbotron hidden">
+            <h2>Employment Status</h2>
+            <p>{{status}}</p>
+        </div>
+        <div class="jumbotron hidden">
+            <h2>Employment Status</h2>
             <p>{{status}}</p>
         </div>
     </div>
+    
     {% endblock %}

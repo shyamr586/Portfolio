@@ -10,17 +10,18 @@
 
     {% block content %}
 
-    
-
     <div class="container">
         <div class="content jumbotron text-center">
-            <div class="cover"></div>
+            <div class="cover first"></div>
+            <div class="cover second"></div>
+            <div class="cover third"></div>
+            <div class="cover fourth"></div>
             <div class="text">
                 <h1>Hello, {{message}}
                     {% if user.is_authenticated %}
-                    <span>
+                    <span class = "backspace">
                         {{ user.first_name }}
-                        {{ user.last_name }}!
+                        {{ user.last_name }}
                     </span>
                     {% endif %}
                     
@@ -28,30 +29,30 @@
             </div>
         </div>
 
-        <div class="jumbotron hidden" id="first">
-            <p>{{short_bio}}</p>
-        </div>
+        <div class="container hidden" id="first">
 
-        <div class="jumbotron hidden">
+            <h2>
+                {{short_bio1|linebreaks}}
+               
+            </h2>
+            
+            <h3>
+                {{short_bio2|linebreaks}}
+               
+            </h3>
+            <br>
+            <p id = "brief">{{short_bio3}}</p>
+
+        </div>
+        <br>
+        <br>
+        <div class="container hidden" id="status">
             <h2>Employment Status</h2>
+            <br>
             <p>{{status}}</p>
         </div>
-        <div class="jumbotron hidden">
-            <h2>Employment Status</h2>
-            <p>{{status}}</p>
-        </div>
-        <div class="jumbotron hidden">
-            <h2>Employment Status</h2>
-            <p>{{status}}</p>
-        </div>
-        <div class="jumbotron hidden">
-            <h2>Employment Status</h2>
-            <p>{{status}}</p>
-        </div>
-        <div class="jumbotron hidden">
-            <h2>Employment Status</h2>
-            <p>{{status}}</p>
-        </div>
+        <br>
+        <br>
     </div>
-    
+    <script src = "{% static "firstapp/scripts/animations.js" %}"></script>
     {% endblock %}

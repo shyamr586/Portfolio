@@ -1,19 +1,26 @@
 {% extends "firstapp/base.html"%}
 {% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static "firstapp/css/bio.css" %}">
+{% endblock %}
 {%block title%} Bio {% endblock %}
     {% block content %} 
+    <div id="progress-bar"></div> 	
+    <div id="scroll-path"></div>
+
     <div class = "container">
-        <div class="jumbotron">
-            <h1>Bio Page</h1>
-        </div>
-        <div class="jumbotron">
+        
+        <div class="hidden text" id="first">
             <h2>About Me</h2>
-            <p>{{message}}</p>
+            <p>{{message|linebreaks}}</p>
         </div>
-        <div class="jumbotron">
+        <br>
+        <br>
+        <div class="hidden text">
             <h2>Resume</h2>
-            <a href="{% static 'firstapp/files/CV.pdf' %}">
+            <a href="{% static 'firstapp/files/CV.pdf' %}" target="_blank">
             Have a look at my CV.</a>
         </div>
     </div>
+    <script src = "{% static "firstapp/scripts/bio.js" %}"></script>
     {% endblock %}

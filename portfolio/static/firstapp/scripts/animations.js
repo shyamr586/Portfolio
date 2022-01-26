@@ -33,6 +33,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
         targets: '.cover',
         left: ['-100%','100%'],
         easing: 'easeOutExpo',
-        duration: 2000
+        duration: 2000,
+        delay: (el,i)=>i*200+i%2*500,
+    })
+    .add({
+      targets: '.text',
+      top: ["75%", "50%"],
+      opacity: [0,1],
+      easing: 'easeOutExpo',
+      duration: 1200,
+      offset: '-=1600'
     })
 })
+
+var progressbar = document.getElementById("progress-bar");
+var percentage = document.getElementById("percentage");
+var pageHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function(){
+  var progress = (window.pageYOffset/pageHeight) * 100;
+  progressbar.style.height = progress + "%";
+}

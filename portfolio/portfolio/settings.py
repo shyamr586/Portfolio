@@ -16,8 +16,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = Path.joinpath(BASE_DIR,"template")
 STATIC_DIR = Path.joinpath(BASE_DIR,"static")
+NODE_PACKAGE_DIR = Path.joinpath(BASE_DIR,"node_modules")
 
-STATICFILES_DIRS = [STATIC_DIR]
+STATICFILES_DIRS = [STATIC_DIR,NODE_PACKAGE_DIR]
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/

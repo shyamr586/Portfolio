@@ -6,16 +6,14 @@
 {%endblock%}
 {%block title%} Feedback {% endblock %}
     {% block content %} 
-    <div class = "container">
-        <div class="jumbotron">
-            <h1>Feedback Page</h1>
+        <div class = "container text">
             <h2>{{message}}</h2>
-        </div>
+        
 
         
         {% if user.is_authenticated %}
             <!-- <img src = "{{user.picture_url}}"> -->
-        <div class="container-fluid">
+        <div class="container">
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -24,7 +22,7 @@
         </div>
         {% else %}
         
-        <div class="jumbotron">
+        <div class="login-button">
             <a href="{% provider_login_url 'linkedin_oauth2' %}" class="btn btn-secondary">
                 <i class="fa fa-linkedin fa-fw"></i>
                 <span>Login with LinkedIn to post a Feedback!</span>
@@ -33,15 +31,16 @@
         </div>
         {% endif %}
         <br>
-        <div class="jumbotron">
+        <div class="container">
             <div class="row">
                 {% for entry in feedbacks %}
 
-                    <div class="col-sm-4">{{entry.name}}({{entry.post_time}})</div>
-                    <div class="col-sm-8">{{entry.comment}}</div>
+                    <div class="col-sm-3">{{entry.name}}({{entry.post_time|date:"d-M-y"}})</div>
+                    <div class="col-sm-9">{{entry.comment}}</div>
                     <br>
                 {% endfor %}
-         </div>
+            </div>
         </div>
+
     </div>
     {% endblock %}

@@ -1,3 +1,7 @@
+body{
+    background-color:#121217;
+}
+
 label,input {
     display: block;
     height: 30px auto;
@@ -5,4 +9,21 @@ label,input {
 
 textarea{
     height: auto;
+    width: 100%;
+}
+
+.text{
+    color: rgb(135, 135, 248);
+}
+
+.login-button{
+    text-align: center;   
+}
+
+.login-button a{
+    background-color: #00a8e8;
+}
+
+.login-button a:hover{
+    background-color: rgb(45, 45, 255)
 }

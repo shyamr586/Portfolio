@@ -1,0 +1,38 @@
+body{
+    background-color:#121217;
+}
+
+.container{
+    color: rgb(135, 135, 248);
+    text-align: justify;
+}
+
+#first{
+    margin-top: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(227, 230, 255);
+}
+
+
+.hidden{
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+  animation: fade-in 2s;
+}
+
+@keyframes hidden {
+    from {opacity: 1; transform: scale(.7,.7)}
+    to {opacity: 0;}
+}
+.hidden-element {
+  animation: hidden 2s;
+}

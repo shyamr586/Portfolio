@@ -8,14 +8,26 @@ body{
 }
 
 #first{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
-a{
+#skills-block{
+    margin-bottom: 3%;
+}
+
+#cv{
     text-decoration: none;
-    color: rgb(227, 230, 255);
+    color: #0800a8;
 }
 
+#cv:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
+#skills{
+    display: inline ;
+}
 
 .hidden{
     opacity: 0;

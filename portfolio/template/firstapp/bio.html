@@ -10,17 +10,26 @@
 
     <div class = "container">
         
-        <div class="hidden text" id="first">
+        <div class="hidden text block" id="first">
             <h2>About Me</h2>
             <p>{{message|linebreaks}}</p>
         </div>
         <br>
         <br>
-        <div class="hidden text">
+        <div class="hidden text block" id = "cv-block">
             <h2>Resume</h2>
-            <a href="{% static 'firstapp/files/CV.pdf' %}" target="_blank">
-            Have a look at my CV.</a>
+            <a id="cv" href="{% static 'firstapp/files/Resume.pdf' %}" target="_blank">
+            	&#128221;Have a look at my CV </a>
+        </div>
+        <br>
+        <br>
+        <div class="hidden text block" id="skills-block">
+            <h2>Technical Skills</h2>
+            {% for skill in skills %}
+                <p id = "skills">⦾ {{skill}}&nbsp</p>
+            {% endfor %}
         </div>
     </div>
-    <script src = "{% static "firstapp/scripts/bio.js" %}"></script>
+    <script src = "{% static "firstapp/scripts/bio_and_feedback.js" %}"></script>
+    
     {% endblock %}

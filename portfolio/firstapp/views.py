@@ -27,7 +27,26 @@ def bio(request):
          progress. I constantly observe the requirements put forward by the industry to see what skills\
          are desired and give my best effort to keep up with the standards. \n\nI come across my colleagues as an\
          honest and hard-working individual who would always be punctual and trustworthy."
-    return render(request,"firstapp/bio.html",context = {"message":message})
+    
+    skills = [
+        "Python 2.7/3+",
+        "Java",
+        "React",
+        "Vue.js",
+        "JavaScript",
+        "NodeJS",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Tableau",
+        "WEKA",
+        "Flask",
+        "Django",
+        "Figma",
+        
+    ]
+    
+    return render(request,"firstapp/bio.html",context = {"message":message, "skills":skills})
 
 def get_data():
     return FeedbackModel.objects.all()

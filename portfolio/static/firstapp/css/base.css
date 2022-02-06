@@ -2,8 +2,15 @@ nav{
     background-color: #08adee;
 }
 
+button .navbar-toggler{
+    color: black;
+}
+
 ul li a{
     color: #00070a;
+}
+ul li a:hover{
+    color: #ffffff;
 }
 
 #scroll-path{ 	/*needs both js and html to work*/
@@ -32,4 +39,21 @@ ul li a{
 nav img{
     height: 25px;
     width: 25px;
+}
+
+.block{
+    background-color: #00a8e8;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+@media (max-width: 485px) {
+    .collapse-item{
+        display: none;
+    }
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
 }

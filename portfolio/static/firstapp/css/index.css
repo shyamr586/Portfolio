@@ -4,10 +4,13 @@ body{
 
 .content{    
     position: relative;
+    height: 15%;
     overflow: hidden;
-    background-color: #00a8e8;
+    background-color: #121217;
     margin: 15% auto;
 }
+
+
 
 .cover{
     position: absolute;
@@ -15,6 +18,11 @@ body{
     left: 0;
     top: 0;
     background: linear-gradient(to right,#3F5EF9,#3FBBF9);
+}
+
+h1{
+    font-size: 1.6em;
+    padding: 10px   ;
 }
 
 .text{
@@ -71,9 +79,6 @@ body{
 }
 
 #status{
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 }
 
-#first,#brief,#status{
-    color: rgb(135, 135, 248);
-}

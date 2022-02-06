@@ -11,25 +11,26 @@
     {% block content %}
 
     <div class="container">
-        <div class="content jumbotron text-center">
+        <div class="content jumbotron text-center reveal-block">
             <div class="cover first"></div>
             <div class="cover second"></div>
             <div class="cover third"></div>
             <div class="cover fourth"></div>
             <div class="text">
-                <h1>Hello, {{message}}
+                <h1>Hello, 
                     {% if user.is_authenticated %}
                     <span class = "backspace">
-                        {{ user.first_name }}
-                        {{ user.last_name }}
+                        {{message}}, {{ user.first_name }}.
                     </span>
+                    {% else %}
+                    {{message}}.
                     {% endif %}
                     
                 </h1>   
             </div>
         </div>
 
-        <div class="container hidden" id="first">
+        <div class="container hidden block" id="first">
 
             <h2>
                 {{short_bio1|linebreaks}}
@@ -46,7 +47,7 @@
         </div>
         <br>
         <br>
-        <div class="container hidden" id="status">
+        <div class="container hidden block" id="status">
             <h2>Employment Status</h2>
             <br>
             <p>{{status}}</p>

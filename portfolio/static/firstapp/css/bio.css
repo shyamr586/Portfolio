@@ -48,3 +48,9 @@ body{
 .hidden-element {
   animation: hidden 2s;
 }
+
+.carousel-item{
+    background-color: rgb(135, 135, 248);
+    border-radius: 20px;
+    height: 200px;
+}

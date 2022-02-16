@@ -1,4 +1,5 @@
 env/
+portfolio/firstapp/config.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -94,6 +95,8 @@ ipython_config.py
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
+node_modules
+portfolio/node_modules
 
 # Celery stuff
 celerybeat-schedule

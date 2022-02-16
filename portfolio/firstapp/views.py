@@ -1,6 +1,9 @@
 from email import message
 from django.shortcuts import render
 from .forms import FeedbackForm, FeedbackModel
+import requests
+from .config import USERNAME,TOKEN
+import json
 
 # Create your views here.
 def index(request):
@@ -46,7 +49,12 @@ def bio(request):
         
     ]
     
-    return render(request,"firstapp/bio.html",context = {"message":message, "skills":skills})
+    url = f"https://api.github.com/users/{USERNAME}/repos"        
+    headers = {"Accept":"application/vnd.github.mercy-preview+json"}        
+    repos = requests.get(url, headers=headers, auth=(USERNAME,TOKEN)).json()
+    print (repos[0]["name"])
+
+    return render(request,"firstapp/bio.html",context = {"message":message, "skills":skills,"repos":repos})
 
 def get_data():
     return FeedbackModel.objects.all()

@@ -20,6 +20,7 @@
             <h2>Resume</h2>
             <a id="cv" href="{% static 'firstapp/files/Resume.pdf' %}" target="_blank">
             	&#128221;Have a look at my CV </a>
+              
         </div>
         <br>
         <br>
@@ -28,8 +29,44 @@
             {% for skill in skills %}
                 <p id = "skills">⦾ {{skill}}&nbsp</p>
             {% endfor %}
-        </div>
+            {% for repo in repos %}
+              {{repo.name}}
+            {% endfor %}
+          </div>
+          <br>
+          <br>
+        <div id="carouselExampleControls" class="carousel slide hidden" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static "firstapp/images/linkedin.png" %}" alt="First slide">
+              </div>
+              {% for repo in repos %}
+              <div class="carousel-item">
+                <a href = "{{repo.html_url}}" target = "_blank">
+                  <!-- <img src="{% static "firstapp/images/linkedin.png" %}"  alt="..."> -->
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>{{repo.name}}</h5>
+                    {% if repo.description != None %}
+                        <p>{{repo.description}}</p>
+                    {% endif %}
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+              
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
     </div>
+    <br>
+    <br>
     <script src = "{% static "firstapp/scripts/bio_and_feedback.js" %}"></script>
     
     {% endblock %}

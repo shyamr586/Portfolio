@@ -84,18 +84,21 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIALACCOUNT_PROVIDERS = {
     'linkedin': {
-    'SCOPE': [
-        'r_liteprofile',
-        'r_emailaddress'
-    ],
-    'PROFILE_FIELDS': [
-        'id',
-        'first-name',
-        'last-name',
-        'email-address',
-        'picture-url',
-        'public-profile-url',
-    ]
+        'SCOPE': [
+            'r_liteprofile',
+            'r_emailaddress'
+        ],
+        'PROFILE_FIELDS': [
+            'id',
+            'first-name',
+            'last-name',
+            'email-address',
+            'picture-url',
+            'public-profile-url',
+        ],
+        'HEADERS': {
+            'x-li-src': 'msdk'
+        }
     }
 }
 

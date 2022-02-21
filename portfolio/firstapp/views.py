@@ -3,66 +3,31 @@ from django.shortcuts import render
 from .forms import FeedbackForm, FeedbackModel
 import requests
 from .config import USERNAME,TOKEN
+from .scrape import REPOS
 import json
+from . import details
 
+print (details.message)
 # Create your views here.
 def index(request):
-    
-    message = "Welcome to my Portfolio"
-    short_bio1 = "Hi there! You are currently going through my portfolio."
-    short_bio2 = "Glad you dropped by!"
-    short_bio3 = "I'm a passionate and hard working (trust me, I am!) IT grad interested in developing \
-        IT solutions."
-    status = "I am currently looking for a full-time or intenship opportunity."
-    return render(request,"firstapp/index.html",context = {"message":message,
-                                        "short_bio1": short_bio1,
-                                        "short_bio2": short_bio2,
-                                        "short_bio3": short_bio3,
-                                        "status": status
+    return render(request,"firstapp/index.html",context = {"message":details.message,
+                                        "short_bio1": details.short_bio1,
+                                        "short_bio2": details.short_bio2,
+                                        "short_bio3": details.short_bio3,
+                                        "status": details.status
                                         })
 
 def bio(request):
-    message = "My name is Shyam Ramakrishnan, and I graduated from Middlesex University in April of 2021.\
-        I have an honorary bachelor's degree in Information Technology.\n\nWith the increase in the\
-         development of the IT sector and the many sub-sectors that are branching ever so frequently,\
-        my interest in the field also advanced. After writing my very first script using Python 2.7, I\
-         realized that I had an interest in the field and was very eager to learn more about the attainable\
-         progress. I constantly observe the requirements put forward by the industry to see what skills\
-         are desired and give my best effort to keep up with the standards. \n\nI come across my colleagues as an\
-         honest and hard-working individual who would always be punctual and trustworthy."
     
-    skills = [
-        "Python 2.7/3+",
-        "Java",
-        "React",
-        "Vue.js",
-        "JavaScript",
-        "NodeJS",
-        "SQL",
-        "HTML",
-        "CSS",
-        "Tableau",
-        "WEKA",
-        "Flask",
-        "Django",
-        "Figma",
-        
-    ]
-    
-    url = f"https://api.github.com/users/{USERNAME}/repos"        
-    headers = {"Accept":"application/vnd.github.mercy-preview+json"}        
-    repos = requests.get(url, headers=headers, auth=(USERNAME,TOKEN)).json()
-    print (repos[0]["name"])
-
-    return render(request,"firstapp/bio.html",context = {"message":message, "skills":skills,"repos":repos})
+    return render(request,"firstapp/bio.html",context = {"message":details.message_bio, "skills":details.skills,"repos":REPOS})
 
 def get_data():
-    return FeedbackModel.objects.all()
+    return FeedbackModel.objects.order_by('-post_time')
 
 def feedback(request):
 
     feedback_data = get_data()
-    
+
     form = FeedbackForm()
     message = ""
     if request.method == "POST":

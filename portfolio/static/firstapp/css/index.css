@@ -1,5 +1,18 @@
+@font-face {
+    font-family: 'Glacial';
+    src: url('../files/GlacialIndifference-Regular.otf');
+}
+
+*{
+    font-family: 'Glacial';
+}
+
 body{
     background-color:#121217;
+}
+
+.block{
+    padding: 30px;
 }
 
 .content{    

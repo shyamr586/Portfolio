@@ -3,7 +3,7 @@
 {% block head %}
 <link rel="stylesheet" href="{% static "firstapp/css/bio.css" %}">
 {% endblock %}
-{%block title%} Bio {% endblock %}
+{%block title%} Shyam | Bio Page {% endblock %}
     {% block content %} 
     <div id="progress-bar"></div> 	
     <div id="scroll-path"></div>
@@ -29,27 +29,28 @@
             {% for skill in skills %}
                 <p id = "skills">⦾ {{skill}}&nbsp</p>
             {% endfor %}
-            {% for repo in repos %}
-              {{repo.name}}
-            {% endfor %}
           </div>
           <br>
           <br>
         <div id="carouselExampleControls" class="carousel slide hidden" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{% static "firstapp/images/linkedin.png" %}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Projects</h5>
+                  <p>Click on the arrow buttons to navigate. Click anywhere on slide to redirect to the corresponding
+                    source code.
+                  </p>
+                </div>
               </div>
               {% for repo in repos %}
               <div class="carousel-item">
                 <a href = "{{repo.html_url}}" target = "_blank">
-                  <!-- <img src="{% static "firstapp/images/linkedin.png" %}"  alt="..."> -->
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>{{repo.name}}</h5>
-                    {% if repo.description != None %}
-                        <p>{{repo.description}}</p>
-                    {% endif %}
-                  </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>{{repo.name}}</h5>
+                  {% if repo.description != None %}
+                      <p>{{repo.description}}</p>
+                  {% endif %}
+                </div>
                 </a>
               </div>
               {% endfor %}

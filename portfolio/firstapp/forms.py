@@ -10,7 +10,7 @@ class FeedbackForm(forms.ModelForm):
         widgets = {
             'name': forms.HiddenInput(),
             'post_time': forms.HiddenInput(),
-            'comment': forms.Textarea(attrs={'rows':3,'placeholder': 'Type your comment'}),
+            'comment': forms.Textarea(attrs={'rows':3,'placeholder': 'Type your comment\n\nP.S: no cursing'}),
         }
 
     def clean_comment(self):

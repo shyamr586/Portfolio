@@ -1,1 +1,1 @@
-web: gunicorn portfolio/portfolio:application
+web: sh -c 'cd portfolio && gunicorn potrfolio.wsgi'

@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath "django-practice/portfolio" django-practice.wsgi
+web: gunicorn portfolio.wsgi

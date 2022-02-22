@@ -1,7 +1,4 @@
-from re import T
-from statistics import mode
-from tkinter.ttk import Widget
-from typing_extensions import Required
+from re imp
 from django.db import models
 from datetime import datetime
 

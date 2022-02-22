@@ -1,1 +1,1 @@
-web: gunicorn portfolio.wsgi
+web: gunicorn --chdir "django-practice/portfolio" django-practice.wsgi

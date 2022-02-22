@@ -1,1 +1,1 @@
-web: sh -c 'cd ./portfolio/ && exec gunicorn portfolio.wsgi --log-file -'
+web: sh -c 'cd .\portfolio\ && exec gunicorn portfolio.wsgi --log-file -'

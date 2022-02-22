@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath "/django-practice/portfolio/portfolio" portfolio.wsgi --preload
+web: gunicorn portfolio.wsgi

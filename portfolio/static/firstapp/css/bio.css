@@ -50,7 +50,7 @@ body{
 }
 
 .carousel-caption {
-    position: absolute;
+    top: 5px;
     /* right: 15%; */
     bottom: 20px;
     /* left: 15%; */

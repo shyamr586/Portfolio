@@ -45,10 +45,13 @@
               {% for repo in repos %}
               <div class="carousel-item">
                 <a href = "{{repo.html_url}}" target = "_blank">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>{{repo.name}}</h5>
+                <div class="carousel-caption d-md-block">
+                  <h5><span id="blueish">class</span> <span id="yellowish">Project</span>:</h5>
+                  <p>&nbsp;<span id="blueish">def</span> <span id="yellowish">__init__</span>(self):</p>
+                  <p>&nbsp;&nbsp;<span id="blueish">self</span>.name = '<span id="yellowish">{{repo.name}}</span>'</p>
+                  <p>&nbsp;&nbsp;<span id="blueish">self</span>.link = '<span id="yellowish"><a href="{{repo.html_url}}">Click me!</a></span>'</p>
                   {% if repo.description != None %}
-                      <p>{{repo.description}}</p>
+                      <p class="collapse-item">&nbsp;&nbsp;<span id="blueish">self</span>.description ='{{<span id="yellowish">repo.description}}</span>'</p>
                   {% endif %}
                 </div>
                 </a>

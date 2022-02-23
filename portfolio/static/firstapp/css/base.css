@@ -77,6 +77,12 @@ nav img{
     }
 }
 
+@media (max-width: 720px) {
+    .cursor{
+        display: none;
+    }
+}
+
 .inner-cursor{
     position: fixed;
     left: 10px;

@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Glacial';
+    src: url("../files/GlacialIndifference-Regular.008080d5594f.otf");
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url("../files/Dosis.39e264b36985.ttf");
+}
+
+*{
+    cursor: none;
+    font-family: 'Glacial';
+}
+nav{
+    background-color: #08adee;
+}
+
+nav .navbar-brand{
+    font-family: 'Dosis';   
+    color: white;
+}
+
+.navbar-brand :hover{
+    color: black;
+}
+
+button .navbar-toggler{
+    color: black;
+}
+
+ul li a{
+    color: #00070a;
+}
+ul li a:hover{
+    color: #ffffff;
+}
+
+#scroll-path{ 	/*needs both js and html to work*/
+    position: fixed;
+    width: 5px;
+    height: 0%;
+    top:0px;
+    left:0px;
+    background: #121217;
+}
+
+#progress-bar {
+    background: #00a8e8;
+    position: fixed;
+    width: 5px;
+    height: 0%;
+    top:0px;
+    right:0px;
+    margin:0px;
+    padding:0px;			
+}
+::-webkit-scrollbar{
+    width:0;
+}
+
+nav img{
+    height: 25px;
+    width: 25px;
+}
+
+.block{
+    background-color: #00a8e8;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+@media (max-width: 485px) {
+    .collapse-item{
+        display: none;
+    }
+}
+
+.inner-cursor{
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 9999;
+}
+
+.inner-cursor.grow{
+    width: 25px;
+    height: 25px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}

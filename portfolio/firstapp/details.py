@@ -7,7 +7,7 @@ short_bio2 = "Glad you dropped by!"
 short_bio3 = "I'm a passionate and hard working (trust me, I am!) IT grad interested in developing \
     IT solutions."
 
-status = "I am currently looking for a full-time or intenship opportunity."
+status = "I am currently looking for a full-time or internship opportunity."
 
 message_bio = "My name is Shyam Ramakrishnan, and I graduated from Middlesex University in April of 2021.\
         I have an honorary bachelor's degree in Information Technology.\n\nWith the increase in the\

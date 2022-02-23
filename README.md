@@ -1,4 +1,4 @@
-# django-practice
+# Portfolio
 
 This repo contains my portfolio which was made with Python's Django web framework. 
 

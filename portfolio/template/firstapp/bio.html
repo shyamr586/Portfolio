@@ -39,24 +39,17 @@
                   <h5>Projects</h5>
                 </div>
               </div>
-
               {% for repo in repos %}
               <div class="carousel-item">
                 
                 <div class="carousel-caption d-md-block">
-                  
-                  <h5><span id="blueish">class</span> <span id="yellowish">Project</span>:</h5>
-                  <p>&nbsp;<span id="blueish">def</span> <span id="yellowish">__init__</span>(self):</p>
-                  <div id="second-indent">
-                    <p><span id="blueish">self</span>.name = '<span id="yellowish">{{repo.name}}</span>'</p>
-                    <p><span id="blueish">self</span>.link = '<span id="yellowish"><a href="{{repo.html_url}}" target="_blank">Click me!</a></span>'</p>
-                    {% if repo.description != None %}
-                        <p class="collapse-item"><span id="blueish">self</span>.description ='<span id="yellowish">{{repo.description}}</span>'</p>
-                  
-                 </div>
+                  <h5>{{repo.name}}</h5>
+                  {% if repo.description != None %}
+                      <p class="collapse-item">{{repo.description}}</p>
                   {% endif %}
+                  <a href = "{{repo.html_url}}" target = "_blank">Link</a>
                 </div>
-                
+
               </div>
               {% endfor %}
               

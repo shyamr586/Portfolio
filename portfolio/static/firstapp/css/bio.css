@@ -56,30 +56,3 @@ body{
     height: 200px;
 }
 
-.carousel-caption{
-    position: relative;
-    left: 5%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: left;
-    margin: 10px auto;
-    margin-right:5%;
-}
-
-.carousel-caption p,h5{
-    margin: 0;
-}
-
-#blueish{
-    color: #8983ff;
-}
-
-#yellowish{
-    color: #FFFFA7;
-}
-
-#second-indent{
-    margin-left:20px;
-}

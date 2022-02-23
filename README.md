@@ -10,6 +10,10 @@ Django
 
 Vanilla JS, HTML, CSS
 
+## Database:
+
+PostgreSQL
+
 ### Other resources:
 
 Bootstrap, Anime.js, allauth, requests

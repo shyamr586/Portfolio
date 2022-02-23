@@ -56,10 +56,15 @@ body{
     height: 200px;
 }
 
+.carousel-item> p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 #blueish{
-    color: #0d0869;
+    color: #8983ff;
 }
 
 #yellowish{
-    color: #FFAE42;
+    color: #FFFFA7;
 }

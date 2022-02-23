@@ -1,10 +1,7 @@
-from email import message
 from django.shortcuts import render
 from .forms import FeedbackForm, FeedbackModel
-import requests
-from .config import USERNAME,TOKEN
+import os
 from .scrape import REPOS
-import json
 from . import details
 
 print (details.message)

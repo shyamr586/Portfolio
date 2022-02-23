@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Glacial';
+    src: url('../files/GlacialIndifference-Regular.otf');
+}
+
+*{
+    font-family: 'Glacial';
+}
+
+body{
+    background-color:#121217;
+}
+
+.block{
+    padding: 30px;
+}
+
+.content{    
+    position: relative;
+    height: 15%;
+    overflow: hidden;
+    background-color: #121217;
+    margin: 15% auto;
+}
+
+
+
+.cover{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right,#3F5EF9,#3FBBF9);
+}
+
+h1{
+    font-size: 1.6em;
+    padding: 10px   ;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    color: whitesmoke;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+  animation: fade-in 2s;
+}
+
+@keyframes hidden {
+    from {opacity: 1; transform: scale(.7,.7)}
+    to {opacity: 0;}
+}
+.hidden-element {
+  animation: hidden 2s;
+}
+
+.first{
+    height: 20%;
+}
+.second{
+    height: 30%;
+    top:20%;
+}
+.third{
+    height: 40%;
+    top:50%;
+}
+.fourth{
+    height: 10%;
+    top:90%;
+}
+
+.backspace{
+    margin-left: -4px;
+}
+
+#first{
+    margin-top: 25%;
+}
+
+#status{
+    margin-bottom: 1%;
+}
+

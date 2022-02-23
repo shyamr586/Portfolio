@@ -45,7 +45,7 @@
                 <div class="carousel-caption d-md-block">
                   <h5>{{repo.name}}</h5>
                   {% if repo.description != None %}
-                      <p class="collapse-item">{{repo.description}}</p>
+                      <p id="desc">{{repo.description}}</p>
                   {% endif %}
                   <a href = "{{repo.html_url}}" target = "_blank">Link</a>
                 </div>

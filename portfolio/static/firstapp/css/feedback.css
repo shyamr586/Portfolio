@@ -1,5 +1,8 @@
 body{
     background-color:#121217;
+}
+
+.btn :hover{
     cursor: none;
 }
 

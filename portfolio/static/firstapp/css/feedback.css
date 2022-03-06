@@ -2,10 +2,9 @@ body{
     background-color:#121217;
 }
 
-.btn :hover{
+btn:not(:disabled):not(.disabled) {
     cursor: none;
 }
-
 label,input {
     display: block;
     height: 30px auto;

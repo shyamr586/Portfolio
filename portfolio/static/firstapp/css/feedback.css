@@ -2,7 +2,7 @@ body{
     background-color:#121217;
 }
 
-btn:not(:disabled):not(.disabled) {
+a .btn .btn-secondary{
     cursor: none;
 }
 label,input {

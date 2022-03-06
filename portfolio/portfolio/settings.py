@@ -31,7 +31,7 @@ DATE_INPUT_FORMATS = ['%d-%m-%Y']
 SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-=6q_^)lcgsgneo8j1(a6)_3_7(m+0oxcdbmmebs2t6fc-4%d6v')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['shyam-portfolio-django.herokuapp.com',"127.0.0.1"]
 

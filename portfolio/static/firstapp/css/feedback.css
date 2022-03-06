@@ -2,7 +2,7 @@ body{
     background-color:#121217;
 }
 
-a .btn .btn-secondary{
+a:hover{
     cursor: none;
 }
 label,input {

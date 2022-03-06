@@ -1,5 +1,6 @@
 body{
     background-color:#121217;
+    cursor: none;
 }
 
 label,input {
